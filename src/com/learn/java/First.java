@@ -1,9 +1,11 @@
 package com.learn.java;
 
+import com.learn.java.automobile.Driver;
 import com.learn.java.automobile.FourWheeler;
 import com.learn.java.automobile.Maruti;
 import com.learn.java.automobile.Porsche;
 import com.learn.java.automobile.TwoWheeler;
+import com.learn.java.automobile.Vehicle;
 import com.learn.java.encapsulation.Car;
 import com.learn.java.inheritance.BabyDog;
 import com.learn.java.inheritance.Cat;
@@ -68,6 +70,10 @@ public class First {
 		m1.brake();
 		m1.accelerate();
 		m1.display();
+		
+		Vehicle vehicle = new Vehicle("KA 01 A 0001",911,2);
+		Driver d1 = new Driver(vehicle);
+		d1.test();
 		       
 	}
 

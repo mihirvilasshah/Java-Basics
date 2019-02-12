@@ -1,17 +1,21 @@
 package com.learn.java.automobile;
 
 public class FourWheeler extends Vehicle{
-	int noofwheel;
+
     public FourWheeler(String r,int m,int n)
     {
-        super(r,m);
-        noofwheel=n;
+        super(r,m,n);
+ 
     }
     public void display()
     {
         System.out.println("Four wheeler");
         super.display();
-        System.out.println("No. of wheels:" +noofwheel);
     }
-
+    @Override
+	public void test() {
+		// TODO Auto-generated method stub
+		super.test();
+		System.out.println("Passed four wheeler test");
+	}
 }
