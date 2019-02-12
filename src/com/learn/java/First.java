@@ -12,6 +12,7 @@ import com.learn.java.inheritance.Cat;
 import com.learn.java.inheritance.Dog;
 import com.learn.java.inheritance.Programmer;
 import com.learn.java.polymorphism.Add;
+import com.learn.java.print.PrintAtoZ;
 
 public class First {
 
@@ -74,6 +75,10 @@ public class First {
 		Vehicle vehicle = new Vehicle("KA 01 A 0001",911,2);
 		Driver d1 = new Driver(vehicle);
 		d1.test();
+		
+		//PrintAtoZ
+		PrintAtoZ pr = new PrintAtoZ();
+		pr.printAtoZ();
 		       
 	}
 
