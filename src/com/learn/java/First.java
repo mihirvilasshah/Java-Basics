@@ -1,5 +1,7 @@
 package com.learn.java;
 
+import com.learn.java.arrays.ThreeDArray;
+import com.learn.java.arrays.TwoDArray;
 import com.learn.java.automobile.Driver;
 import com.learn.java.automobile.FourWheeler;
 import com.learn.java.automobile.Maruti;
@@ -79,6 +81,15 @@ public class First {
 		//PrintAtoZ
 		PrintAtoZ pr = new PrintAtoZ();
 		pr.printAtoZ();
+		System.out.println();
+		
+		//Arrays
+		TwoDArray twod = new TwoDArray();
+		twod.printStepArray(6);
+		twod.printProduct(4);
+		
+		ThreeDArray threed= new ThreeDArray();
+		threed.print3DArray(3,4,2);
 		       
 	}
 
