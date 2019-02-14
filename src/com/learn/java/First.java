@@ -8,6 +8,8 @@ import com.learn.java.automobile.Maruti;
 import com.learn.java.automobile.Porsche;
 import com.learn.java.automobile.TwoWheeler;
 import com.learn.java.automobile.Vehicle;
+import com.learn.java.bool.BooleanLogicalOp;
+import com.learn.java.control.SwitchEx;
 import com.learn.java.encapsulation.Car;
 import com.learn.java.inheritance.BabyDog;
 import com.learn.java.inheritance.Cat;
@@ -85,11 +87,20 @@ public class First {
 		
 		//Arrays
 		TwoDArray twod = new TwoDArray();
+		twod.printStepArray(-9);
 		twod.printStepArray(6);
 		twod.printProduct(4);
 		
 		ThreeDArray threed= new ThreeDArray();
 		threed.print3DArray(3,4,2);
+		
+		//Switch case Example
+		SwitchEx switchEx = new SwitchEx();
+		switchEx.printDay(3);
+		
+		//Logical Boolean Operators
+		BooleanLogicalOp boolOp = new BooleanLogicalOp();
+		boolOp.boolLogicalOpDemo();
 		       
 	}
 
