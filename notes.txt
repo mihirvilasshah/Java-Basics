@@ -16,3 +16,11 @@ So in a class Car you might have a method double convertMpgToKpl(double mpg) whi
 because one might want to know what 35mpg converts to, even if nobody has ever built a Car. 
 But void setMileage(double mpg) (which sets the efficiency of one particular Car) 
 can't be static since it's inconceivable to call the method before any Car has been constructed.
+
+
+
+return - terminates the method
+
+break - terminates the immediately enclosing for loop/ switch case
+
+continue - just stops further execution of current iterarion and jumps to next iteration
