@@ -89,6 +89,7 @@ public class First {
 		TwoDArray twod = new TwoDArray();
 		twod.printStepArray(-9);
 		twod.printStepArray(6);
+		twod.printStepArrayReverse(5);
 		twod.printProduct(4);
 		
 		ThreeDArray threed= new ThreeDArray();

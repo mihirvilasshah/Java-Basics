@@ -21,6 +21,25 @@ public class TwoDArray {
 		   }	
 	}
 	
+	public void printStepArrayReverse(int n) {
+		if(n>0) {
+			char twoD[][] = new char[n][];
+			for(int i=n-1;i>=0;i--) {
+				twoD[i] = new char[i+1];	
+			}
+			
+			for(int i=n-1;i>=0;i--) {
+				for(int j=0;j<=i;j++) {
+					twoD[i][j] = '.';
+					System.out.print(twoD[i][j]);
+				}
+				System.out.println();
+			}
+		} else {
+			   System.out.println("Parameter must be > 0");
+		   }	
+	}
+	
 	public void printProduct(int n) {
 		if(n>0) {
 			float[] arr[] = new float[n][n];
