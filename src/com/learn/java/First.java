@@ -17,6 +17,7 @@ import com.learn.java.inheritance.Dog;
 import com.learn.java.inheritance.Programmer;
 import com.learn.java.polymorphism.Add;
 import com.learn.java.print.PrintAtoZ;
+import com.learn.java.stack.Stack;
 
 public class First {
 
@@ -102,6 +103,14 @@ public class First {
 		//Logical Boolean Operators
 		BooleanLogicalOp boolOp = new BooleanLogicalOp();
 		boolOp.boolLogicalOpDemo();
+		
+		//Stack
+		Stack st = new Stack(10);
+		for(int i = 0; i < 12 ; i++) {
+			st.push(i);
+		}
+		
+		st.popAllAndPrint();
 		       
 	}
 
