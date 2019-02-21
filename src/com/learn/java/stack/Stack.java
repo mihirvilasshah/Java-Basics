@@ -3,14 +3,15 @@ package com.learn.java.stack;
 public class Stack {
 	private int maxSize;
 	private int top;
+	private int stackArr[];
 
 	public Stack(int maxSize) {
-		super();
 		this.maxSize = maxSize;
 		top = -1;
+		stackArr = new int[maxSize];
 	}
 
-	int stackArr[] = new int[10];  // new int[maxSize];
+	
 	
 	public void push(int x) {
 		if(isFull()) {
