@@ -18,6 +18,8 @@ import com.learn.java.inheritance.Programmer;
 import com.learn.java.polymorphism.Add;
 import com.learn.java.print.PrintAtoZ;
 import com.learn.java.stack.Stack;
+import com.learn.java.tree.BinaryTree;
+import com.learn.java.tree.Node;
 
 public class First {
 
@@ -109,8 +111,27 @@ public class First {
 		for(int i = 0; i < 12 ; i++) {
 			st.push(i);
 		}
-		
 		st.popAllAndPrint();
+		System.out.println();
+		
+		//Tree
+		BinaryTree tree = new BinaryTree();
+		tree.root1 = new Node(1); 
+        tree.root1.left = new Node(2); 
+        tree.root1.right = new Node(3); 
+        tree.root1.left.left = new Node(4); 
+        tree.root1.left.right = new Node(5); 
+   
+        tree.root2 = new Node(1); 
+        tree.root2.left = new Node(2); 
+        tree.root2.right = new Node(3); 
+        tree.root2.left.left = new Node(4); 
+        tree.root2.left.right = new Node(5);
+        
+        if (tree.identicalBinaryTrees(tree.root1, tree.root2)) 
+            System.out.println("Both trees are identical"); 
+        else
+            System.out.println("Trees are not identical"); 
 		       
 	}
 

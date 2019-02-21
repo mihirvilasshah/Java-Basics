@@ -10,8 +10,6 @@ public class Stack {
 		top = -1;
 		stackArr = new int[maxSize];
 	}
-
-	
 	
 	public void push(int x) {
 		if(isFull()) {
