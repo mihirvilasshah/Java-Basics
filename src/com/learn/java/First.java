@@ -15,6 +15,7 @@ import com.learn.java.inheritance.BabyDog;
 import com.learn.java.inheritance.Cat;
 import com.learn.java.inheritance.Dog;
 import com.learn.java.inheritance.Programmer;
+import com.learn.java.narytree.NaryTreeNode;
 import com.learn.java.polymorphism.Add;
 import com.learn.java.print.PrintAtoZ;
 import com.learn.java.stack.Stack;
@@ -132,6 +133,31 @@ public class First {
             System.out.println("Both trees are identical"); 
         else
             System.out.println("Trees are not identical"); 
+        
+        //N-ary Tree
+        int n = 3;
+        NaryTreeNode root = new NaryTreeNode("0. Things", n);
+
+        root.addChild("1. Men");
+            root.getChild(0).addChild("1.1. Clothes");
+                root.getChild(0).getChild(0).addChild("1.1.1. T-Shirt");
+                root.getChild(0).getChild(0).addChild("1.1.2. Shirt");
+                root.getChild(0).getChild(0).addChild("1.1.3. Jeans");
+            root.getChild(0).addChild("1.2. Footwear");
+                root.getChild(0).getChild(1).addChild("1.2.1. Sports Shoes");
+                root.getChild(0).getChild(1).addChild("1.2.2. Casual Shoes");
+                root.getChild(0).getChild(1).addChild("1.2.3. Formal Shoes");
+                root.getChild(0).getChild(1).addChild("1.2.4. Funky Shoes");  // won't add
+        root.addChild("2.Women");
+            root.getChild(1).addChild("2.1. Clothes");
+                root.getChild(1).getChild(0).addChild("2.1.1. Western");
+                root.getChild(1).getChild(0).addChild("2.1.2. Ethic");
+            root.getChild(1).addChild("2.2. Footwear");
+                root.getChild(1).getChild(1).addChild("2.2.1. Heels");
+                root.getChild(1).getChild(1).addChild("2.2.2. Wedges");
+
+//        NaryTreeNode.print(root);
+        NaryTreeNode.printUtil(root, 1);
 		       
 	}
 
