@@ -23,11 +23,11 @@ public class Stack {
 		return stackArr[top--];
 	}
 	
-	public boolean isEmpty() {
+	private boolean isEmpty() {
 	    return (top == -1);
 	}
 	   
-	public boolean isFull() {
+	private boolean isFull() {
 	    return (top == maxSize - 1);
 	}
 	
