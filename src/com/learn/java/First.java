@@ -162,9 +162,10 @@ public class First {
         
         //Multilevel selection task
         LevelNode n0 = new LevelNode("0. Things");
+        
         LevelNode n1 = new LevelNode("1. Men");
         n0.addChild(n1);
-        LevelNode n2 = new LevelNode("1. Men");
+        LevelNode n2 = new LevelNode("2. Women");
         n0.addChild(n2);
         
         LevelNode n11 = new LevelNode("1.1. Clothes");
@@ -184,10 +185,26 @@ public class First {
         LevelNode n123 = new LevelNode("1.2.3. Casual Shoes");
         n12.addChild(n123);
         
+        LevelNode n21 = new LevelNode("2.1. Clothes");
+        n2.addChild(n21);
+        LevelNode n22 = new LevelNode("2.2. Footwear");
+        n2.addChild(n22);
+        
+        LevelNode n211 = new LevelNode("2.1.1. Western");
+        n21.addChild(n211);
+        LevelNode n212 = new LevelNode("2.1.2. Ethnic");
+        n21.addChild(n212);
+        
+        LevelNode n221 = new LevelNode("2.2.1. Wedges");
+        n22.addChild(n221);
+        LevelNode n222 = new LevelNode("2.2.2. Heels");
+        n22.addChild(n222);
+        LevelNode n223 = new LevelNode("2.2.3. Casual Shoes");
+        n22.addChild(n223);
+        
         PathFinder pFinder = new PathFinder();
         System.out.println();
-//        pFinder.printPath(n0, n112);
-        pFinder.printPath(n112);
+        pFinder.printPath(n223);
         
         
         
