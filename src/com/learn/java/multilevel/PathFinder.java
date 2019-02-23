@@ -20,12 +20,12 @@ public class PathFinder {
 	public void printPath(LevelNode src, LevelNode dest){
 		path(src, dest);
 		for(String step : path) {
-			System.out.println(step);
+			System.out.print("->"+step);
 		}
 	}
 	
 	public void path(LevelNode dest) {		
-		System.out.println(dest.getData()+"->");
+		System.out.print("<-"+dest.getData());
 		if(dest.hasParent()) {
 			path(dest.getParent());
 		}

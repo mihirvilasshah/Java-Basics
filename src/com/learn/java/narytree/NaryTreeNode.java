@@ -51,31 +51,5 @@ public class NaryTreeNode {
             printUtil(child, depth + 1);
         }
     }
-    
-    private void getPath(NaryTreeNode node, ArrayList<NaryTreeNode> currentPath, ArrayList<ArrayList<NaryTreeNode>> paths) {
-        if (currentPath == null)
-            return;
-
-        currentPath.add(node);
-
-        if (node.getChildren().size() == 0) {
-            // This is a leaf
-            paths.add(clone(currentPath));
-        }
-        for (NaryTreeNode child : node.getChildren())
-            getPath(child, currentPath, paths);
-
-        int index = currentPath.indexOf(node);
-        for (int i = index; i < currentPath.size(); i++)
-            currentPath.remove(index);
-    }
-    
-    private ArrayList<NaryTreeNode> clone(ArrayList<NaryTreeNode> list) {
-        ArrayList<NaryTreeNode> newList = new ArrayList<NaryTreeNode>();
-        for (NaryTreeNode node : list)
-            newList.add(new NaryTreeNode(data, n)); ///
- 
-        return newList;
-    }
       
 }

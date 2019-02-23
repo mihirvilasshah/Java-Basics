@@ -14,15 +14,15 @@ public class LevelNode {
 	}
 	
 	public void addChild(LevelNode child) {
-		parent = this;
+		child.parent = this;
 		this.children.add(child);
 	}
 	
 	public boolean hasParent() {
-		if(this.parent!=null) {
-			return true;
-		} else {
+		if(this.parent==null) {
 			return false;
+		} else {
+			return true;
 		}
 	}
 

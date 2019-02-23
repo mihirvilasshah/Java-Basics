@@ -185,8 +185,10 @@ public class First {
         n12.addChild(n123);
         
         PathFinder pFinder = new PathFinder();
-//        pFinder.printPath(n0, n1);
-        pFinder.path(n1);
+        System.out.println();
+        pFinder.path(n122);
+        System.out.println();
+        pFinder.printPath(n0, n112);
         
         
         
