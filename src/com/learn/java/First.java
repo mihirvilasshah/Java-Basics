@@ -15,6 +15,8 @@ import com.learn.java.inheritance.BabyDog;
 import com.learn.java.inheritance.Cat;
 import com.learn.java.inheritance.Dog;
 import com.learn.java.inheritance.Programmer;
+import com.learn.java.multilevel.LevelNode;
+import com.learn.java.multilevel.PathFinder;
 import com.learn.java.narytree.NaryTreeNode;
 import com.learn.java.polymorphism.Add;
 import com.learn.java.print.PrintAtoZ;
@@ -151,13 +153,44 @@ public class First {
         root.addChild("2.Women");
             root.getChild(1).addChild("2.1. Clothes");
                 root.getChild(1).getChild(0).addChild("2.1.1. Western");
-                root.getChild(1).getChild(0).addChild("2.1.2. Ethic");
+                root.getChild(1).getChild(0).addChild("2.1.2. Ethnic");
             root.getChild(1).addChild("2.2. Footwear");
                 root.getChild(1).getChild(1).addChild("2.2.1. Heels");
                 root.getChild(1).getChild(1).addChild("2.2.2. Wedges");
 
-//        NaryTreeNode.print(root);
-        NaryTreeNode.printUtil(root, 1);
+        NaryTreeNode.print(root);
+        
+        //Multilevel selection task
+        LevelNode n0 = new LevelNode("0. Things");
+        LevelNode n1 = new LevelNode("1. Men");
+        n0.addChild(n1);
+        LevelNode n2 = new LevelNode("1. Men");
+        n0.addChild(n2);
+        
+        LevelNode n11 = new LevelNode("1.1. Clothes");
+        n1.addChild(n11);
+        LevelNode n12 = new LevelNode("1.2. Footwear");
+        n1.addChild(n12);
+        
+        LevelNode n111 = new LevelNode("1.1.1. Shirt");
+        n11.addChild(n111);
+        LevelNode n112 = new LevelNode("1.1.2. Jeans");
+        n11.addChild(n112);
+        
+        LevelNode n121 = new LevelNode("1.2.1. Sports Shoes");
+        n12.addChild(n121);
+        LevelNode n122 = new LevelNode("1.2.2. Formal Shoes");
+        n12.addChild(n122);
+        LevelNode n123 = new LevelNode("1.2.3. Casual Shoes");
+        n12.addChild(n123);
+        
+        PathFinder pFinder = new PathFinder();
+//        pFinder.printPath(n0, n1);
+        pFinder.path(n1);
+        
+        
+        
+        
 		       
 	}
 
