@@ -1,0 +1,143 @@
+*OOP CONCEPTS
+	-Encapsulation - mechanism of hiding of data implementation by restricting access to public methods
+	-Abstraction - representing essential features without including background details
+	-Inheritance - acquires the properties and behaviors of the parent object
+	-Polymorphism - one name many forms
+		Static polymorphism is achieved using method overloading
+			Overloading allows different methods to have same name, 
+			but different signatures where signature can differ by number of input parameters or type of input parameters or both. 
+
+				// Overloaded sum(). This sum takes two int parameters
+   				 public int sum(int x, int y) {
+    				    return (x + y);
+ 				 }
+ 
+			        // Overloaded sum(). This sum takes three int parameters
+   			         public int sum(int x, int y, int z) { 
+      				   return (x + y + z);
+		                 }
+ 
+  			        // Overloaded sum(). This sum takes two double parameters
+   		                 public double sum(double x, double y) { 
+      				   return (x + y);
+  			         }
+	https://www.geeksforgeeks.org/overloading-in-java/   
+ 
+		Dynamic polymorphism using method overriding.
+			allows a subclass or child class,
+			to provide a specific implementation of a method that is already provided by one of its super-classes or parent classes.
+			
+	https://www.geeksforgeeks.org/overriding-in-java/
+
+	http://crackingjavainterviews.blogspot.com/2013/04/what-are-four-principles-of-oop.html	
+	https://www.guru99.com/java-oops-concept.html
+
+
+*JAVA BASICS
+	data types
+	variables
+	syntax
+		public class HelloWorld {
+		public static void main(String[] args) {
+		System.out.println("Hello World!!!");
+			}
+		}
+
+
+*IF BLOCK
+	if(condition1){  
+	//code to be executed if condition1 is true  
+	} else if(condition2){  
+	//code to be executed if condition2 is true  
+	} else if(condition3){  
+	//code to be executed if condition3 is true  
+	}  
+	...  
+	else{  
+	//code to be executed if all the conditions are false  
+	}  
+
+
+
+*WHILE LOOP
+	while(Boolean_expression) {
+        // Statements
+	}
+
+*ACCESS MODIFIERS
+	-<default>
+		only within the same package
+	-private
+		accessible only within the class
+		classes or interface can not be declared as private
+	-protected
+		accessible within same package or sub classes in different package	
+	-public
+		accessible from every where in the program
+
+	https://www.geeksforgeeks.org/access-modifiers-java/
+
+	(Least Accessible) private < default < protected < public (Most Accessible)
+
+	https://www.journaldev.com/2345/java-access-modifiers
+
+
+*FINAL KEYWORD
+	non-access modifier
+	applicable only to a variable, a method or a class
+		final variable - to create constant variables (value can’t be modified=>must initialize)
+		final methods - prevent method overriding (when required to follow the same implementation throughout all the derived classes)
+		final classes - prevent inheritance
+
+	https://www.geeksforgeeks.org/final-keyword-java/
+		
+ 
+*STATIC/INNER CLASSES
+	Java allows us to define a class within another class. 
+	Such a class is called a nested class. 
+	The class which encloses nested class is known as Outer class. 
+	In java, we can’t make Top level class static. 
+	Only nested classes can be static.
+
+	Non-static nested class is also called Inner Class.
+
+	Nested static class doesn’t need reference of Outer class, 
+	but Non-static nested class or Inner class requires Outer class reference.
+		// create instance of nested Static class
+       		OuterClass.NestedStaticClass printer = new OuterClass.NestedStaticClass();
+		
+		// In order to create instance of Inner class we need an Outer class 
+       		// instance. Let us create Outer class instance for creating 
+       		// non-static nested class
+       		OuterClass outer = new OuterClass();        
+       		OuterClass.InnerClass inner  = outer.new InnerClass();
+
+	A static class cannot access non-static members of the Outer class. It can access only static members of Outer class.
+	Inner class(or non-static nested class) can access both static and non-static members of Outer class. 
+	
+	https://www.geeksforgeeks.org/static-class-in-java/
+
+
+*INTERFACE/ABSTRACT CLASSES
+	abstract is a non-access modifier
+	applicable for classes, methods but not variables
+	used to achieve abstraction
+	Abstract classes - class which is having partial implementation(i.e. not all methods present in the class have method definition)
+	Abstract methods - for specifying just method declaration in super-classes
+	
+	abstract vs final
+		class or method never declared with both final and abstract keywords
+		          final    		abstract
+		classes   prevent inheritance   depends upon their child classes for complete implementation
+		methods   prevent overriding    needs to be overridden in sub-classes
+
+	https://www.geeksforgeeks.org/abstract-keyword-in-java/
+
+	interface in java is a blueprint of a class 
+	It has static constants and abstract methods
+	mechanism to achieve abstraction
+	support the functionality of multiple inheritance
+	can be used to achieve loose coupling
+
+	https://www.javatpoint.com/interface-in-java
+
