@@ -17,8 +17,21 @@ because one might want to know what 35mpg converts to, even if nobody has ever b
 But void setMileage(double mpg) (which sets the efficiency of one particular Car) 
 can't be static since it's inconceivable to call the method before any Car has been constructed.
 
+class A {         compile            run      [onClassLoad] class A ref
+  static int x;  --------> bytecode ------>   [memory] x = 0
+  int ;           javac              java
+}
 
 
+Control statements
+===================
+
+	  / selection = if, else, else if, switch case
+control - - iteration = while, do while, for, forEach
+	  \ jump = return, break, continue
+
+Jump control 
+=============
 return - terminates the method
 
 break - terminates the immediately enclosing for loop/ switch case
