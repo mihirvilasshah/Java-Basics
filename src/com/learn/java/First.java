@@ -18,6 +18,7 @@ import com.learn.java.inheritance.Programmer;
 import com.learn.java.multilevel.LevelNode;
 import com.learn.java.multilevel.PathFinder;
 import com.learn.java.narytree.NaryTreeNode;
+import com.learn.java.nestedClass.Outer;
 import com.learn.java.polymorphism.Add;
 import com.learn.java.print.PrintAtoZ;
 import com.learn.java.stack.Stack;
@@ -212,6 +213,9 @@ public class First {
         pf.selectNode(n1);
         
         pf.printPathOfSelectedNodes();
+        
+        //Nested Class - outer / inner
+        Outer outer = new Outer();
         	       
 	}
 }
