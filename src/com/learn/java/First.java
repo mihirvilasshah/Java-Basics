@@ -214,9 +214,9 @@ public class First {
 //        
 //        pf.printPathOfSelectedNodes();
         
-//        n11.select();
-//        n222.select();
-//        n112.select();
+        n11.select();
+        n222.select();
+        n112.select();
         
         n0.printPath();
         System.out.println();

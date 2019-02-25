@@ -64,7 +64,7 @@ public class LevelNode {
 //		return ancestor;
 //	}
 
-	public ArrayList<LevelNode> getChildren() {
+	private ArrayList<LevelNode> getChildren() {
 		return children;
 	}
 	
@@ -72,24 +72,29 @@ public class LevelNode {
 		isSelected = true;	
 	}
 	
-	private void getSelected() {
-		
-	}
-	
-	public void printPath() {
+	ArrayList<String> path = new ArrayList<>();
+	public boolean printPath() {
 		if(this.isSelected) {
-			System.out.print(" -> " + this.data);
-			return;
-		} else {
-			if(hasChildren()) {
+//			System.out.print(" -> " + this.data);
+			path.add(this.data);
+			return true;
+		} else if(hasChildren()) {
+//			if(hasChildren()) {
 				for (LevelNode child : this.getChildren()) {
-					System.out.print(" -> " + this.data);
-					child.printPath();
-					System.out.println();
+//					System.out.print(" -> " + this.data);
+//					child.printPath();
+					if(child.printPath()) {
+						path.add(this.data);
+					}
+						
 				}
-			}
+				
+//			}
+			
 			
 		}
+		System.out.println(path);
+		return false;
 	}
 	
 }
