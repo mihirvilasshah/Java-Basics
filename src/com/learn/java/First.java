@@ -16,7 +16,7 @@ import com.learn.java.inheritance.Cat;
 import com.learn.java.inheritance.Dog;
 import com.learn.java.inheritance.Programmer;
 import com.learn.java.multilevel.LevelNode;
-import com.learn.java.multilevel.PathFinder;
+//import com.learn.java.multilevel.PathFinder;
 import com.learn.java.narytree.NaryTreeNode;
 import com.learn.java.nestedClass.Outer;
 import com.learn.java.polymorphism.Add;
@@ -204,15 +204,23 @@ public class First {
         LevelNode n223 = new LevelNode("2.2.3. Casual Shoes");
         n22.addChild(n223);
         
-        PathFinder pf = new PathFinder();
-        System.out.println();
-        pf.selectNode(n111);
-        pf.selectNode(n21);
-        pf.selectNode(n2);
-        pf.selectNode(n11);
-        pf.selectNode(n1);
+//        PathFinder pf = new PathFinder();
+//        System.out.println();
+//        pf.selectNode(n111);
+//        pf.selectNode(n21);
+//        pf.selectNode(n2);
+//        pf.selectNode(n11);
+//        pf.selectNode(n1);
+//        
+//        pf.printPathOfSelectedNodes();
         
-        pf.printPathOfSelectedNodes();
+//        n11.select();
+//        n222.select();
+//        n112.select();
+        
+        n0.printPath();
+        System.out.println();
+        
         
         //Nested Class - outer / inner
         Outer outer = new Outer();
