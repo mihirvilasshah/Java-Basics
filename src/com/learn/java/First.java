@@ -19,6 +19,10 @@ import com.learn.java.multilevel.LevelNode;
 //import com.learn.java.multilevel.PathFinder;
 import com.learn.java.narytree.NaryTreeNode;
 import com.learn.java.nestedClass.Outer;
+import com.learn.java.overriding.Axis;
+import com.learn.java.overriding.Bank;
+import com.learn.java.overriding.HSBC;
+import com.learn.java.overriding.SBI;
 import com.learn.java.polymorphism.Add;
 import com.learn.java.print.PrintAtoZ;
 import com.learn.java.stack.Stack;
@@ -224,6 +228,17 @@ public class First {
         
         //Nested Class - outer / inner
         Outer outer = new Outer();
+        
+        //Overriding
+//        Bank b1 = new Bank();
+        SBI sbi = new SBI();
+        System.out.println("SBI ROI: "+ sbi.getRateOfInterest());      
+        
+        Axis ax = new Axis();
+        System.out.println("Axis ROI: "+ ax.getRateOfInterest());
+        
+        HSBC h = new HSBC();
+        System.out.println("HSBC ROI: "+ h.getRateOfInterest());
         	       
 	}
 }
