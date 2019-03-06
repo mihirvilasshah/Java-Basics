@@ -15,6 +15,9 @@ import com.learn.java.inheritance.BabyDog;
 import com.learn.java.inheritance.Cat;
 import com.learn.java.inheritance.Dog;
 import com.learn.java.inheritance.Programmer;
+import com.learn.java.inheritance.advance.ClassA;
+import com.learn.java.inheritance.advance.ClassB;
+import com.learn.java.inheritance.advance.ClassC;
 import com.learn.java.multilevel.LevelNode;
 //import com.learn.java.multilevel.PathFinder;
 import com.learn.java.narytree.NaryTreeNode;
@@ -239,6 +242,19 @@ public class First {
         
         HSBC h = new HSBC();
         System.out.println("HSBC ROI: "+ h.getRateOfInterest());
+        
+        //Inheritance - Advance
+        ClassA cA = new ClassA();
+        ClassB cB = new ClassB();
+        ClassC cC = new ClassC();
+        
+        cA.methodA();
+        cB.methodB();
+        cC.methodC();
+        
+        Object object;
+        object = new ClassA();
+               
         	       
 	}
 }
