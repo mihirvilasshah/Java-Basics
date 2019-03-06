@@ -252,9 +252,8 @@ public class First {
         cB.methodB();
         cC.methodC();
         
-        Object object;
-        object = new ClassA();
-               
+        Object obj = new ClassA();
+        obj.getClass();       
         	       
 	}
 }
