@@ -1,5 +1,7 @@
 package com.learn.java;
 
+import com.learn.java.accessmodifier.p1.ClassAlpha;
+import com.learn.java.accessmodifier.p1.ClassBeta;
 import com.learn.java.arrays.ThreeDArray;
 import com.learn.java.arrays.TwoDArray;
 import com.learn.java.automobile.Driver;
@@ -243,7 +245,7 @@ public class First {
         HSBC h = new HSBC();
         System.out.println("HSBC ROI: "+ h.getRateOfInterest());
         
-        //Inheritance - Advance
+        //Inheritance - Advance // Not possible to access CLassA method via cB
         ClassA cA = new ClassA();
         ClassB cB = new ClassB();
         ClassC cC = new ClassC();
@@ -253,7 +255,13 @@ public class First {
         cC.methodC();
         
         Object obj = new ClassA();
-        obj.getClass();       
+        obj.getClass();  
+        
+        //Access Modfiers
+        ClassBeta beta = new ClassBeta();
+        int x = beta.betaPub;
+//        int y = beta.betaPri; // Cannot access private variable of other class
+//        int z = beta.betaDef; // Cannot access default variable of other package
         	       
 	}
 }
