@@ -257,7 +257,7 @@ public class First {
         Object obj = new ClassA();
         obj.getClass();  
         
-        //Access Modfiers
+        //Access Modifiers
         ClassBeta beta = new ClassBeta();
         int x = beta.betaPub;
 //        int y = beta.betaPri; // Cannot access private variable of other class
