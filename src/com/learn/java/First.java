@@ -33,6 +33,10 @@ import com.learn.java.overriding.SBI;
 import com.learn.java.polymorphism.Add;
 import com.learn.java.print.PrintAtoZ;
 import com.learn.java.stack.Stack;
+import com.learn.java.stack.usingInterface.DynStack;
+import com.learn.java.stack.usingInterface.FixedStack;
+import com.learn.java.stack.usingInterface.IntStack;
+import com.learn.java.stack.usingInterface.PrintStack;
 import com.learn.java.tree.BinaryTree;
 import com.learn.java.tree.Node;
 
@@ -267,6 +271,29 @@ public class First {
         
         //Nested Interface
         A.NestedIF nif = new B();
-        int num = nif.x;	       
+        int num = nif.x;
+        
+        //Multi Stack Implementation
+        IntStack intStack = new FixedStack();
+        intStack.push(5);
+        intStack.push(52);
+        intStack.push(5233);
+        intStack.push(533);
+        intStack.push(50);
+        
+        PrintStack pStack = new PrintStack();
+        pStack.print(intStack);
+        
+        intStack = new DynStack();
+        intStack.push(5);
+        intStack.push(52);
+        intStack.push(5233);
+        intStack.push(533);
+        intStack.push(543);
+        intStack.push(536);
+        intStack.push(530);
+        intStack.push(53311);
+        pStack.print(intStack);
+        
 	}
 }
