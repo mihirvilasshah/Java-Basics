@@ -24,6 +24,8 @@ import com.learn.java.multilevel.LevelNode;
 //import com.learn.java.multilevel.PathFinder;
 import com.learn.java.narytree.NaryTreeNode;
 import com.learn.java.nestedClass.Outer;
+import com.learn.java.nestedInterface.A;
+import com.learn.java.nestedInterface.B;
 import com.learn.java.overriding.Axis;
 import com.learn.java.overriding.Bank;
 import com.learn.java.overriding.HSBC;
@@ -262,6 +264,9 @@ public class First {
         int x = beta.betaPub;
 //        int y = beta.betaPri; // Cannot access private variable of other class
 //        int z = beta.betaDef; // Cannot access default variable of other package
-        	       
+        
+        //Nested Interface
+        A.NestedIF nif = new B();
+        int num = nif.x;	       
 	}
 }
