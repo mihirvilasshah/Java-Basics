@@ -46,3 +46,11 @@ Yes this is happening because you are accessing i variable from within your anon
 what happens deep inside is that another copy of your variable is created and will be use inside the anonymous inner class, 
 so for data consistency the compiler will try restrict you from changing the value of i so that's why its telling you to set it to final (or effectively final).
 
+Typecasting
+============
+Typecasting is possible for interfaces as ClassA implements InterfaceA, InterafaceB 
+	so 
+	InterfaceA iA = new ClassA();
+	InteraceB iB = (InteraceB) iA; 
+
+Not for classes it extends only one class.
