@@ -37,6 +37,9 @@ import com.learn.java.stack.usingInterface.DynStack;
 import com.learn.java.stack.usingInterface.FixedStack;
 import com.learn.java.stack.usingInterface.IntStack;
 import com.learn.java.stack.usingInterface.PrintStack;
+import com.learn.java.threads.NAThread1;
+import com.learn.java.threads.NAThread2;
+import com.learn.java.threads.NAThread3;
 import com.learn.java.threads.Thread1;
 import com.learn.java.threads.Thread2;
 import com.learn.java.tree.BinaryTree;
@@ -316,6 +319,21 @@ public class First {
         PrintStack printStack = new PrintStack();
         printStack.print(stack1);
         		
-        System.out.println("Done from main");
+        //Threads - notifyAll
+        NAThread1 naThread1 = new NAThread1();
+        NAThread2 naThread2 = new NAThread2(naThread1);
+        NAThread3 naThread3 = new NAThread3(naThread1);
+        
+        naThread1.start();
+        naThread2.start();
+        try {
+			Thread.sleep(100);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} 
+        naThread3.start();
+    
+        
 	}
 }
