@@ -12,6 +12,9 @@ import com.learn.java.automobile.TwoWheeler;
 import com.learn.java.automobile.Vehicle;
 import com.learn.java.bool.BooleanLogicalOp;
 import com.learn.java.control.SwitchEx;
+import com.learn.java.deadlock.Common;
+import com.learn.java.deadlock.DThread1;
+import com.learn.java.deadlock.DThread2;
 import com.learn.java.encapsulation.Car;
 import com.learn.java.inheritance.BabyDog;
 import com.learn.java.inheritance.Cat;
@@ -334,6 +337,15 @@ public class First {
 		} 
         naThread3.start();
     
+        //Deadlock
+        Common c1 = new Common();
+        Common c2 = new Common();
+        
+        DThread1 dThread1 = new DThread1(c1, c2);
+        dThread1.start();
+        
+        DThread2 dThread2 = new DThread2(c1, c2);
+        dThread2.start();
         
 	}
 }
